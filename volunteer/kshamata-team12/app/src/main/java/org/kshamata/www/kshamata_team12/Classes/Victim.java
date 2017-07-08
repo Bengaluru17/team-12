@@ -7,15 +7,39 @@ package org.kshamata.www.kshamata_team12.Classes;
 public class Victim {
     String id;
     String name;
-    String age;
+    String dob;
     String skills;
-    String EduLvlAfter;
     String EduLvlJoin;
     String photo;
-    String Location;
+    String Longitude;
+
+    public String getLatitude() {
+        return Latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        Latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return Longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        Longitude = longitude;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    String Latitude;
     String jobJoin;
     String salaryJoin;
-    String jobNow;
 
     public String getSkills() {
         return skills;
@@ -24,33 +48,6 @@ public class Victim {
     public void setSkills(String skills) {
         this.skills = skills;
     }
-
-    public String getEduLvlAfter() {
-        return EduLvlAfter;
-    }
-
-    public void setEduLvlAfter(String eduLvlAfter) {
-        EduLvlAfter = eduLvlAfter;
-    }
-
-    public String getJobNow() {
-        return jobNow;
-    }
-
-    public void setJobNow(String jobNow) {
-        this.jobNow = jobNow;
-    }
-
-    public String getSalaryNow() {
-        return salaryNow;
-    }
-
-    public void setSalaryNow(String salaryNow) {
-        this.salaryNow = salaryNow;
-    }
-
-    String salaryNow;
-    String FormsId;
 
     public String getId() {
         return id;
@@ -68,12 +65,12 @@ public class Victim {
         this.name = name;
     }
 
-    public String getAge() {
-        return age;
+    public String getdob() {
+        return dob;
     }
 
-    public void setAge(String age) {
-        this.age = age;
+    public void setdob(String age) {
+        this.dob = age;
     }
 
     public String getEduLvlJoin() {
@@ -92,14 +89,6 @@ public class Victim {
         this.photo = photo;
     }
 
-    public String getLocation() {
-        return Location;
-    }
-
-    public void setLocation(String location) {
-        Location = location;
-    }
-
     public String getJobJoin() {
         return jobJoin;
     }
@@ -114,14 +103,6 @@ public class Victim {
 
     public void setSalaryJoin(String salaryJoin) {
         this.salaryJoin = salaryJoin;
-    }
-
-    public String getFormsId() {
-        return FormsId;
-    }
-
-    public void setFormsId(String formsId) {
-        FormsId = formsId;
     }
 
 }

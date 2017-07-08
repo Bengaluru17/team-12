@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import org.kshamata.www.kshamata_team12.R;
@@ -28,13 +30,18 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+        View rootView = inflater.inflate(R.layout.home_fragment, container, false);
+
+        TextView name = (TextView)rootView.findViewById(R.id.name);
+        TextView dob = (TextView)rootView.findViewById(R.id.age);
+        TextView location = (TextView)rootView.findViewById(R.id.location);
+        TextView job = (TextView)rootView.findViewById(R.id.jobJoin);
+        TextView salary = (TextView)rootView.findViewById(R.id.salaryJoin);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
-        databaseReference.push().setValue("hello");
 
-        
+
 
         // Inflate the layout for this fragment
         return rootView;
