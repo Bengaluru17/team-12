@@ -14,7 +14,7 @@ import android.view.View;
 import org.kshamata.www.kshamata_team12.Fragments.FragmentDrawer;
 import org.kshamata.www.kshamata_team12.Fragments.FriendsFragment;
 import org.kshamata.www.kshamata_team12.Fragments.HomeFragment;
-import org.kshamata.www.kshamata_team12.Fragments.MessagesFragment;
+import org.kshamata.www.kshamata_team12.Fragments.SurveyFragment;
 import org.kshamata.www.kshamata_team12.R;
 
 public class MainActivity extends ActionBarActivity implements FragmentDrawer.FragmentDrawerListener {
@@ -84,7 +84,7 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
                 title = getString(R.string.title_friends);
                 break;
             case 2:
-                fragment = new MessagesFragment();
+                fragment = new SurveyFragment();
                 title = getString(R.string.title_messages);
                 break;
             default:

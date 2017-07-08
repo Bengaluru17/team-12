@@ -7,50 +7,14 @@ package org.kshamata.www.kshamata_team12.Classes;
 public class Victim {
     String id;
     String name;
-    String age;
-    String skills;
-    String EduLvlAfter;
-    String EduLvlJoin;
+    String dob;
+    String skillsJoining;
+    String eduJoining;
     String photo;
-    String Location;
-    String jobJoin;
-    String salaryJoin;
-    String jobNow;
-
-    public String getSkills() {
-        return skills;
-    }
-
-    public void setSkills(String skills) {
-        this.skills = skills;
-    }
-
-    public String getEduLvlAfter() {
-        return EduLvlAfter;
-    }
-
-    public void setEduLvlAfter(String eduLvlAfter) {
-        EduLvlAfter = eduLvlAfter;
-    }
-
-    public String getJobNow() {
-        return jobNow;
-    }
-
-    public void setJobNow(String jobNow) {
-        this.jobNow = jobNow;
-    }
-
-    public String getSalaryNow() {
-        return salaryNow;
-    }
-
-    public void setSalaryNow(String salaryNow) {
-        this.salaryNow = salaryNow;
-    }
-
-    String salaryNow;
-    String FormsId;
+    String longitude;
+    String latitude;
+    String jobJoining;
+    String salaryJoining;
 
     public String getId() {
         return id;
@@ -68,20 +32,28 @@ public class Victim {
         this.name = name;
     }
 
-    public String getAge() {
-        return age;
+    public String getDob() {
+        return dob;
     }
 
-    public void setAge(String age) {
-        this.age = age;
+    public void setDob(String dob) {
+        this.dob = dob;
     }
 
-    public String getEduLvlJoin() {
-        return EduLvlJoin;
+    public String getSkillsJoining() {
+        return skillsJoining;
     }
 
-    public void setEduLvlJoin(String eduLvlJoin) {
-        EduLvlJoin = eduLvlJoin;
+    public void setSkillsJoining(String skillsJoining) {
+        this.skillsJoining = skillsJoining;
+    }
+
+    public String getEduJoining() {
+        return eduJoining;
+    }
+
+    public void setEduJoining(String eduJoining) {
+        eduJoining = eduJoining;
     }
 
     public String getPhoto() {
@@ -92,36 +64,35 @@ public class Victim {
         this.photo = photo;
     }
 
-    public String getLocation() {
-        return Location;
+    public String getLongitude() {
+        return longitude;
     }
 
-    public void setLocation(String location) {
-        Location = location;
+    public void setLongitude(String longitude) {
+        longitude = longitude;
     }
 
-    public String getJobJoin() {
-        return jobJoin;
+    public String getLatitude() {
+        return latitude;
     }
 
-    public void setJobJoin(String jobJoin) {
-        this.jobJoin = jobJoin;
+    public void setLatitude(String latitude) {
+        latitude = latitude;
     }
 
-    public String getSalaryJoin() {
-        return salaryJoin;
+    public String getJobJoining() {
+        return jobJoining;
     }
 
-    public void setSalaryJoin(String salaryJoin) {
-        this.salaryJoin = salaryJoin;
+    public void setJobJoining(String jobJoining) {
+        this.jobJoining = jobJoining;
     }
 
-    public String getFormsId() {
-        return FormsId;
+    public String getSalaryJoining() {
+        return salaryJoining;
     }
 
-    public void setFormsId(String formsId) {
-        FormsId = formsId;
+    public void setSalaryJoining(String salaryJoining) {
+        this.salaryJoining = salaryJoining;
     }
-
 }
