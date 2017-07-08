@@ -90,7 +90,6 @@ body,h1,h2,h3,h4,h5,h6{
         width: 100%;
     }
 }
-
 .network-name {
     text-transform: uppercase;
     font-size: 14px;
@@ -181,6 +180,22 @@ p.copyright {
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+    function foo(){
+        var name= documents.getElementsById("name").value;
+        var id= documents.getElementsById("id").value;
+        var dob= documents.getElementsById("dob").value;
+        var email= documents.getElementsById("email").value;
+        var gender= documents.getElementsById("gender").value;
+        var contact= documents.getElementsById("contact").value;
+        var address= documents.getElementsById("address").value;
+         $("submit").click(function(){
+        $.ajax({url: "demo_test.txt", success: function(result){
+            $("#div1").html(result);
+        }});
+    });
+    } 
+    </script>
     
 </head>
 <body>
@@ -219,8 +234,8 @@ p.copyright {
     <div class="form-group">
         <label class="col-lg-4 control-label">Gender</label>
             <div class="col-lg-4">
-            <input type="radio" name="gender" value="male">Male
-            <input type="radio" name="gender" value="female">Female            
+            <input type="radio" name="gender" id="male" >Male
+            <input type="radio" name="gender" id="female">Female            
             </div>
         </div><br>
 
@@ -239,11 +254,10 @@ p.copyright {
         </div><br><br>
 
             <div align="center">
-            <a href="" class="btn btn-default btn-lg" type="submit" value="submit"> 
-            <span class="network-name">Submit</span></a>
-
-            <a href="" class="btn btn-default btn-lg" type="reset" value="Reset"> 
-            <span class="network-name">Reset</span></a>
+            <input onclick="return foo();" type="submit" id="submit" class="btn btn-default btn-lg" value="submit"> 
+            <span class="network-name">Submit</span>
+            <input class="btn btn-default btn-lg" type="reset" value="Reset"> 
+            <span class="network-name">Reset</span>
             </div>
 
   </div>
