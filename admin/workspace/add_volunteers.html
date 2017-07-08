@@ -13,34 +13,77 @@
 
     <title>Home - Index</title>
 
+        <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="bootstrap/css/landing-page.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    
 </head>
 <body>
+<div class="add_volunteer panel panel-default">
+  <div class="panel-heading" align="center">Personal Details</div>
+  <div class="panel-body">
+      <div class="row">
+    <div class="form-group">
+        <label class="col-lg-4">Volunteer Name</label>
+            <div class="col-lg-4">
+            <input type="text" class="form-control" id="name">
+            </div>
+        </div><br>
 
-<div class="row" >
-<div class="col-md-6" align="center">
-<div class="row">
-	Enter Volunteer Name<input name="volunteer_name" type="text" class="form-control"><br>
-	<div class="col-xs-2"> Enter Volunteer Age<input style="" name="volunteer_age" type="number" class="form-control"><br> 
-    <div>
-    Gender
-    <label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="gender_male" value="male"> Male
-</label>
-<label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="gender_female" value="female"> Female
-</label>
+    <div class="form-group">
+        <label class="col-lg-4 control-label">Volunteer ID</label>
+            <div class="col-lg-4">
+            <input type="text" class="form-control" id="id">
+            </div>
+        </div><br>
 
-	<a href="#" class="btn btn-default btn-lg"><span class="network-name">Add Volunteer</span></a>
+    <div class="form-group">
+        <label class="col-lg-4 control-label">Volunteer Date of Birth</label>
+            <div class="col-lg-4">
+            <input type="date" class="form-control" id="dob">
+            </div>
+        </div><br>
+
+    <div class="form-group">
+        <label class="col-lg-4 control-label">Volunteer E-Mail</label>
+            <div class="col-lg-4">
+            <input type="email" class="form-control" id="email">
+            </div>
+        </div><br>
+
+    <div class="form-group">
+        <label class="col-lg-4 control-label">Gender</label>
+            <div class="col-lg-4">
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female">Female            
+            </div>
+        </div><br>
+
+    <div class="form-group">
+        <label class="col-lg-4 control-label">Volunteer Contact</label>
+            <div class="col-lg-4">
+            <input type="tel" class="form-control" id="contact">
+            </div>
+        </div><br>
+
+    <div class="form-group">
+        <label class="col-lg-4 control-label">Volunteer Address</label>
+            <div class="col-lg-4">
+            <input type="text" class="form-control" id="address">
+            </div>
+        </div><br>
+  </div>
 </div>
 
-</div>
-</div>
+    </div>
 
 </body>
 </html>
