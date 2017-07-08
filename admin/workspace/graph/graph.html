@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <meta charset="utf-8">
 <style>
 
@@ -19,11 +19,12 @@ label {
   <label><input type="radio" name="mode" value="stacked" checked> Stacked</label>
 </form>
 <svg width="500" height="500"></svg>
-<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<script type="text/javascript" src="d3.js"></script>
 <script>
 
-var n = 4, // The number of series.
-    m = 58; // The number of values per series.
+var n = 1, // The number of series.
+    m = 5; // The number of values per series.
 
 // The xz array has m elements, representing the x-values shared by all series.
 // The yz array has n elements, representing the y-values of each of the n series.
@@ -36,7 +37,7 @@ var xz = d3.range(m),
     y1Max = d3.max(y01z, function(y) { return d3.max(y, function(d) { return d[1]; }); });
 
 var svg = d3.select("svg"),
-    margin = {top: 40, right: 10, bottom: 10, left: 5},
+    margin = {top: 50, right: 10, bottom: 10, left: 5},
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom,
     g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -76,7 +77,7 @@ g.append("g")
     .attr("class", "axis axis--x")
     .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x)
-        .tickSize(0)
+        .tickSize(5)
         .tickPadding(6));
 
 d3.selectAll("input")
@@ -119,20 +120,30 @@ function transitionStacked() {
       .attr("x", function(d, i) { return x(i); })
       .attr("width", x.bandwidth());
 }
+d3.json("data.json", function(data){
+
+  console.log("Comes here json function "+data);
+    function initChart(){
+      bumps(data);
+        //all your code for initChart here
+    };
+    initChart();
+});
+
 
 // Returns an array of m psuedorandom, smoothly-varying non-negative numbers.
 // Inspired by Lee Byron’s test data generator.
 // http://leebyron.com/streamgraph/
 function bumps(m) {
   var values = [], i, j, w, x, y, z;
-
+console.log(m);
   // Initialize with uniform random values in [0.1, 0.2).
   for (i = 0; i < m; ++i) {
     values[i] = 0.1 + 0.1 * Math.random();
   }
 
   // Add five random bumps.
-  for (j = 0; j < 5; ++j) {
+  for (j = 0; j < 10; ++j) {
     x = 1 / (0.5 + Math.random());
     y = 2 * Math.random() - 0.5;
     z = 10 / (0.1 + Math.random());
@@ -149,5 +160,4 @@ function bumps(m) {
 
   return values;
 }
-
 </script>
