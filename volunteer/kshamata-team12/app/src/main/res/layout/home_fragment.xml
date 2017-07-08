@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical" android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_margin="10dp"
+            android:background="#666666"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lakshmi"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/name"
+            android:layout_below="@+id/name"
+            android:layout_marginTop="10dp"
+            android:text="10/11/2017"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bangalore"
+            android:textSize="18sp"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Job during joining"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/jobJoin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Random job"
+            android:textSize="18sp"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salary during joining"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/salaryJoin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="12,000 per annum"
+            android:textSize="18sp"
+            android:layout_marginStart="20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
