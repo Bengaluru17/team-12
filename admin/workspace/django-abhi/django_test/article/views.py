@@ -4,7 +4,8 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.shortcuts import render_to_response
 from article.models import Article
-
+from firebase import firebase
+firebase=firebase.FirebaseApplication('https://kshamata-1c47d.firebaseio.com/',None)
 
 # Create your views here.
 def hello(request):
@@ -32,6 +33,8 @@ def language(request,language='en-gb'):
     return response
 
 def login(request):
+    result = firebase.post('/', {'userx': 'x'})
+    print result
     return render_to_response('index.html')
 
 def success(request):
