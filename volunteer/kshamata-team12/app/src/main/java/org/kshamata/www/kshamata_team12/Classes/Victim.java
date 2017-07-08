@@ -8,46 +8,13 @@ public class Victim {
     String id;
     String name;
     String dob;
-    String skills;
-    String EduLvlJoin;
+    String skillsJoining;
+    String eduJoining;
     String photo;
-    String Longitude;
-
-    public String getLatitude() {
-        return Latitude;
-    }
-
-    public void setLatitude(String latitude) {
-        Latitude = latitude;
-    }
-
-    public String getLongitude() {
-        return Longitude;
-    }
-
-    public void setLongitude(String longitude) {
-        Longitude = longitude;
-    }
-
-    public String getDob() {
-        return dob;
-    }
-
-    public void setDob(String dob) {
-        this.dob = dob;
-    }
-
-    String Latitude;
-    String jobJoin;
-    String salaryJoin;
-
-    public String getSkills() {
-        return skills;
-    }
-
-    public void setSkills(String skills) {
-        this.skills = skills;
-    }
+    String longitude;
+    String latitude;
+    String jobJoining;
+    String salaryJoining;
 
     public String getId() {
         return id;
@@ -65,20 +32,28 @@ public class Victim {
         this.name = name;
     }
 
-    public String getdob() {
+    public String getDob() {
         return dob;
     }
 
-    public void setdob(String age) {
-        this.dob = age;
+    public void setDob(String dob) {
+        this.dob = dob;
     }
 
-    public String getEduLvlJoin() {
-        return EduLvlJoin;
+    public String getSkillsJoining() {
+        return skillsJoining;
     }
 
-    public void setEduLvlJoin(String eduLvlJoin) {
-        EduLvlJoin = eduLvlJoin;
+    public void setSkillsJoining(String skillsJoining) {
+        this.skillsJoining = skillsJoining;
+    }
+
+    public String getEduJoining() {
+        return eduJoining;
+    }
+
+    public void setEduJoining(String eduJoining) {
+        eduJoining = eduJoining;
     }
 
     public String getPhoto() {
@@ -89,20 +64,35 @@ public class Victim {
         this.photo = photo;
     }
 
-    public String getJobJoin() {
-        return jobJoin;
+    public String getLongitude() {
+        return longitude;
     }
 
-    public void setJobJoin(String jobJoin) {
-        this.jobJoin = jobJoin;
+    public void setLongitude(String longitude) {
+        longitude = longitude;
     }
 
-    public String getSalaryJoin() {
-        return salaryJoin;
+    public String getLatitude() {
+        return latitude;
     }
 
-    public void setSalaryJoin(String salaryJoin) {
-        this.salaryJoin = salaryJoin;
+    public void setLatitude(String latitude) {
+        latitude = latitude;
     }
 
+    public String getJobJoining() {
+        return jobJoining;
+    }
+
+    public void setJobJoining(String jobJoining) {
+        this.jobJoining = jobJoining;
+    }
+
+    public String getSalaryJoining() {
+        return salaryJoining;
+    }
+
+    public void setSalaryJoining(String salaryJoining) {
+        this.salaryJoining = salaryJoining;
+    }
 }
