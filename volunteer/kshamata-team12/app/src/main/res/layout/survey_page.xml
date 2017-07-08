@@ -38,6 +38,7 @@
             android:layout_margin="20dp"/>
 
         <Button
+            android:id="@+id/next"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:background="#999999"
