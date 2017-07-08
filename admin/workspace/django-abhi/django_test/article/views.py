@@ -39,3 +39,10 @@ def login(request):
 
 def success(request):
     return render_to_response('dashboard.html')
+
+def search(request):
+    return render_to_response('search.html')
+def add_volunteers(request):
+    return render_to_response('add_volunteers.html')
+def scheduling(request):
+    return  render_to_response('scheduling.html')
