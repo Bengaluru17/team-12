@@ -56,7 +56,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['/home/abhi/JPM/team-12/admin/workspace',
-                 #'/home/abhi/python/django-abhi/django_test/article'#
+                 #'/home/atbhi/python/django-abhi/django_test/article'#
                  ],
         'APP_DIRS': True,
         'OPTIONS': {
