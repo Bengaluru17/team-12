@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
-		code for good - Team 12 
-	</title>
-
+    <title>
+        Add Volunteer
+    </title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +12,10 @@
 
     <title>Home - Index</title>
 
-   <style type="text/css">
+        <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <style type="text/css">
         body,
 html {
     width: 100%;
@@ -88,7 +90,6 @@ body,h1,h2,h3,h4,h5,h6{
         width: 100%;
     }
 }
-
 .network-name {
     text-transform: uppercase;
     font-size: 14px;
@@ -175,20 +176,91 @@ p.copyright {
     </style>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+    function foo(){
+        var name= documents.getElementsById("name").value;
+        var id= documents.getElementsById("id").value;
+        var dob= documents.getElementsById("dob").value;
+        var email= documents.getElementsById("email").value;
+        var gender= documents.getElementsById("gender").value;
+        var contact= documents.getElementsById("contact").value;
+        var address= documents.getElementsById("address").value;
+         $("submit").click(function(){
+        $.ajax({url: "demo_test.txt", success: function(result){
+            $("#div1").html(result);
+        }});
+    });
+    } 
+    </script>
+    
 </head>
 <body>
+<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation" style="background-color: #FFD700;">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="padding: -15px;">
+        <img alt="Brand" src="logo.jpg" class="img-responsive" style="height:200;width:171px;padding-left:20px;margin-top: 2px;margin-top: -15px;"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Account</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Logout</a>
+                    </li>
 
-<div class="row" align="right">
-<div class="col-md-6" align="center">
-<div class="row">
-	Enter Volunteer Name<input name="volunteer_name" type="text" class="form-control"><br>
-	Enter Victim's  Name<input name="victim_name" type="text" class="form-control"><br>
-	<a href="#" class="btn btn-default btn-lg"><span class="network-name">Schedule</span></a>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav><br><br><br><br><br>
+<br><br><div class="add_volunteer panel panel-default">
+  <div class="panel-heading" align="center">Personal Details</div>
+  <div class="panel-body" >
+      <div class="row">
+    <div class="form-group">
+        <label class="col-lg-4 control-label">Volunteer Contact Number</label>
+            <div class="col-lg-4">
+            <input type="tel" class="form-control" id="victim_id">
+            </div>
+        </div><br>
+
+    <div class="form-group">
+        <label class="col-lg-4 control-label">Victim's id</label>
+            <div class="col-lg-4">
+            <input type="text" class="form-control" id="volunteer_id">
+            </div>
+        </div><br><br>
+
+            <div align="center">
+            <input onclick="return foo();" type="submit" id="submit" class="btn btn-default btn-lg" value="Schedule"> 
+            <span class="network-name"></span>
+            <input class="btn btn-default btn-lg" type="reset" value="Reset"> 
+            <span class="network-name"></span>
+            </div>
+
+  </div>
 </div>
 
-</div>
-</div>
-
+    </div>
+        
 </body>
 </html>
