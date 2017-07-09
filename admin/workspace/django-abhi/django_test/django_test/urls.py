@@ -29,5 +29,6 @@ urlpatterns = [
     url(r'^search', search),
     url(r'^add_volunteers', add_volunteers),
     url(r'^scheduling', scheduling),
+    url(r'^submitted',success)
 
 ]

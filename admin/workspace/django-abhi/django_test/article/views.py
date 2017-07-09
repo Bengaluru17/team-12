@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.shortcuts import render_to_response
 from article.models import Article
 from firebase import firebase
+import json
 firebase=firebase.FirebaseApplication('https://kshamata-1c47d.firebaseio.com/',None)
 
 # Create your views here.
@@ -38,11 +39,31 @@ def login(request):
     return render_to_response('index.html')
 
 def success(request):
+    username = 'not username'
+    username=request.GET.get('username', None)
+    print username
+    password=request.GET.get('password', None)
+    print password
+
+    #if username == "admin" and password == "pass":
     return render_to_response('dashboard.html')
 
 def search(request):
     return render_to_response('search.html')
 def add_volunteers(request):
+    name=request.GET.get('name', None)
+    id = request.GET.get('id', None)
+    address = request.GET.get('address', None)
+    contact = request.GET.get('contact', None)
+    email = request.GET.get('email', None)
+    dob = request.GET.get('dob', None)
+    male = request.GET.get('male', None)
+    female = request.GET.get('female', None)
+    if name != None:
+        data = {'name': name, 'id': id, 'address': address, 'contact': contact,
+            'email': email, 'dob': dob, 'male': male, 'female': female}
+        json_data = json.dumps(data)
+        result=firebase.post('/volunteers',json_data)
     return render_to_response('add_volunteers.html')
 def scheduling(request):
     return  render_to_response('scheduling.html')
