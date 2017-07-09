@@ -34,7 +34,7 @@ def language(request,language='en-gb'):
     return response
 
 def login(request):
-    result = firebase.post('/', {'userx': 'x'})
+    result = firebase.post('/notlegit', {'userx': 'x'})
     print result
     return render_to_response('index.html')
 
@@ -64,7 +64,7 @@ def add_volunteers(request):
                 'email': email, 'dob': dob, 'male': male, 'female': female}'''
         json = '{id:"' + id + '"address:"' + address + '" name: "' + name + '"}'
         #json_data=json.dump(data)
-        result=firebase.post(json)
+        result=firebase.post('/victims',json)
     return render_to_response('add_volunteers.html')
 
 def scheduling(request):
