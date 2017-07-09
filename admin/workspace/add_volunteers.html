@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<title>
 		Add Volunteer
 	</title>
@@ -174,34 +176,96 @@ p.copyright {
     margin: 15px 0 0;
 }
     </style>
+    <script>
+    $(document).ready(function()
+    {
+        type="POST";
+        $("#submit").click(function()
+        <!--{   echo "function";-->
+        {
+            var name=document.getElementById("name").value;
+            var id=document.getElementById("id").value;
+            var dob=document.getElementById("dob").value;
+            var email=document.getElementById("email").value;
+            var contact=document.getElementById("contact").value;
+            var address=document.getElementById("address").value;
+            var male=document.getElementById("male").value;
+            var female=document.getElementById("female").value;
+            console.log(name);
+            $.ajax(
+            {
+                url: '/add_volunteers',
+                data:
+                {
+                    'name': name,
+                    'id': id,
+                    'dob': dob,
+                    'email':email,
+                    'contact':contact,
+                    'address':address,
+                    'male':male,
+                    'female':female
+                },
+                dataType: 'json',
+                success : function()
+                {
+
+                    window.location.href="/submitted"
+                },
+                error: function()
+                {
+                    window.location.href="/submitted"
+                }
+            });
+        });
+    });
+    </script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <script type="text/javascript">
-    function foo(){
-        var name= documents.getElementsById("name").value;
-        var id= documents.getElementsById("id").value;
-        var dob= documents.getElementsById("dob").value;
-        var email= documents.getElementsById("email").value;
-        var gender= documents.getElementsById("gender").value;
-        var contact= documents.getElementsById("contact").value;
-        var address= documents.getElementsById("address").value;
-         $("submit").click(function(){
-        $.ajax({url: "demo_test.txt", success: function(result){
-            $("#div1").html(result);
-        }});
-    });
-    } 
-    </script>
     
 </head>
 <body>
-<div class="add_volunteer panel panel-primary">
+<<<<<<< HEAD
+<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation" style="background-color: #FFD700;">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="padding: -15px;">
+        <img alt="Brand" src="logo.jpg" class="img-responsive" style="height:200;width:171px;padding-left:20px;margin-top: 2px;margin-top: -15px;"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Account</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav><br><br><br><br><br>
+<br><br><div class="add_volunteer panel panel-default">
   <div class="panel-heading" align="center">Personal Details</div>
-  <div class="panel-body">
+  <div class="panel-body" >
       <div class="row">
     <div class="form-group">
         <label class="col-lg-4">Volunteer Name</label>
@@ -232,10 +296,11 @@ p.copyright {
         </div><br>
 
     <div class="form-group">
-        <label class="col-lg-4 control-label">Gender</label>
-            <div class="col-lg-4">
+        <label class="col-lg-4 control-label" >Gender</label>
+            <div class="col-lg-4" align="center">
             <input type="radio" name="gender" id="male" >Male
             <input type="radio" name="gender" id="female">Female            
+
             </div>
         </div><br>
 
@@ -255,9 +320,10 @@ p.copyright {
 
             <div align="center">
             <input onclick="return foo();" type="submit" id="submit" class="btn btn-default btn-lg" value="submit"> 
-            <span class="network-name">Submit</span>
+            <span class="network-name"></span>
             <input class="btn btn-default btn-lg" type="reset" value="Reset"> 
-            <span class="network-name">Reset</span>
+            <span class="network-name"></span>
+
             </div>
 
   </div>

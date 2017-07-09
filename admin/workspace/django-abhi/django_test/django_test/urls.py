@@ -26,5 +26,9 @@ urlpatterns = [
     url(r'^language/(?P<language>[a-z\-]+)/$', language),
     url(r'^login', login),
     url(r'^success', success),
+    url(r'^search', search),
+    url(r'^add_volunteers', add_volunteers),
+    url(r'^scheduling', scheduling),
+    url(r'^submitted',success)
 
 ]
