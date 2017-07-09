@@ -6,8 +6,8 @@
     <string name="drawer_close">Close</string>
 
     <string name="nav_item_home">Home</string>
-    <string name="nav_item_friends">Friends</string>
-    <string name="nav_item_notifications">Messages</string>
+    <string name="nav_item_friends">Upload Pictures</string>
+    <string name="nav_item_notifications">Surveys</string>
 
     <!-- navigation drawer item labels  -->
     <string-array name="nav_drawer_labels">
@@ -16,8 +16,8 @@
         <item>@string/nav_item_notifications</item>
     </string-array>
 
-    <string name="title_messages">Messages</string>
-    <string name="title_friends">Friends</string>
+    <string name="title_messages">Surveys</string>
+    <string name="title_friends">Pictures</string>
     <string name="title_home">Home</string>
 
     <!-- TODO: Remove or change this placeholder text -->
