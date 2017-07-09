@@ -119,5 +119,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
+PROJECT_ROOT='/home/abhi/JPM/team-12/admin/workspace/django-abhi/'
+STATIC_URL = os.path.join(BASE_DIR, "static/")
+STATIC_ROOT = os.path.join(os.path.abspath(
+    os.path.join(PROJECT_ROOT, 'django_test', 'static')), '')
 
-STATIC_URL = '/static/'
+#STATIC_URL = '/static/'

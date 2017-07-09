@@ -6,7 +6,7 @@ from django.shortcuts import render_to_response
 from article.models import Article
 from firebase import firebase
 import json
-firebase=firebase.FirebaseApplication('https://kshamata-1c47d.firebaseio.com/',None)
+firebase=firebase.FirebaseApplication('https://kshamata-1c47d.firebaseio.com/', None)
 
 # Create your views here.
 def hello(request):
@@ -60,17 +60,19 @@ def add_volunteers(request):
     male = request.GET.get('male', None)
     female = request.GET.get('female', None)
     if name != None:
-        '''data = {'name': name, 'id': id, 'address': address, 'contact': contact,
-            'email': email, 'dob': dob, 'male': male, 'female': female}'''
-        for i in range(10):
-            '''json_data = json.dumps('id':id)
-            json_data.dumps('address':address)
-            json_data.dumps('contact':contact)
-            json_data.dumps('email':email)
-            json_data.dumps('dob':dob)
-            json_data.dumps('male':male) = json.dumps('female':female)
-            json_data = json.dumps('name':name)'''
-            result=firebase.post('/volunteers',json_data)
+        '''json = '{name:" ' name'', 'id': id, 'address': address, 'contact': contact,
+                'email': email, 'dob': dob, 'male': male, 'female': female}'''
+        json = '{name:"' + url + '" address: "' + address + '" name: "' + name + '"}'
+        #json_data=json.dump(data)
+        result=firebase.post()
     return render_to_response('add_volunteers.html')
+
 def scheduling(request):
-    return  render_to_response('scheduling.html')
+    return render_to_response('scheduling.html')
+def searchname(request):
+    print "SEARCHHHH NAMMEEEEEEE"
+    return render_to_response('name.html')
+def searchlocation(request):
+    return render_to_response('location.html')
+def searchskills(request):
+    return render_to_response('skill.html')
