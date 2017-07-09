@@ -17,14 +17,23 @@ from django.conf.urls import  include, url
 from django.contrib import admin
 from article.views import *
 from article.urls import *
+from django.conf import settings
+from django.conf.urls.static import static
 admin.autodiscover()
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^hello/$', article),
     url(r'^articles/', include('article.urls')),
     url(r'^language/(?P<language>[a-z\-]+)/$', language),
-    url(r'^login', login),
-    url(r'^success', success),
-
+    url(r'^login/', login),
+    url(r'^success/', success),
+    url(r'^search/', search),
+    url(r'^add_volunteers/', add_volunteers),
+    url(r'^scheduling/', scheduling),
+    url(r'^submitted/', success),
+    url(r'^searchbyname/', searchname),
+    url(r'^searchbyskills/', searchskills),
+    url(r'^searchbylocation/', searchlocation)
 ]

@@ -37,7 +37,7 @@ body,h1,h2,h3,h4,h5,h6{
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url(../img/intro-bg.jpg) no-repeat center center;
+    background: url(background.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -179,7 +179,7 @@ p.copyright {
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation" style="background-color: #FFD700;">
         <div class="container topnav">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -189,19 +189,20 @@ p.copyright {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="#">kshamata</a>
+                <a class="navbar-brand" href="#" style="padding: -15px;">
+        <img alt="Brand" src="logo.jpg" class="img-responsive" style="height:200;width:171px;padding-left:20px;margin-top: 2px;margin-top: -15px;"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#">Home</a>
+                        <a href="./dashboard.html">Home</a>
                     </li>
                     <li>
                         <a href="#">Account</a>
                     </li>
                     <li>
-                        <a href="#">Logout</a>
+                        <a href="./index.html">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -221,19 +222,13 @@ p.copyright {
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <li>
-                                <a href="search/name.html" class="btn btn-default btn-lg"> <span class="network-name">Name</span></a>
+                                <a href="/searchbyname" class="btn btn-default btn-lg"> <span class="network-name">Name</span></a>
                             </li>
                             <li>
-                                <a href="search/date.html" class="btn btn-default btn-lg"><span class="network-name">Date</span></a>
+                                <a href="/searchbyskills" class="btn btn-default btn-lg"><span class="network-name">Skills</span></a>
                             </li>
                             <li>
-                                <a href="search/month.html" class="btn btn-default btn-lg"><span class="network-name">Month</span></a>
-                            </li>
-                            <li>
-                                <a href="search/skill.html" class="btn btn-default btn-lg"><span class="network-name">Skills</span></a>
-                            </li>
-                            <li>
-                                <a href="search/location.html" class="btn btn-default btn-lg"><span class="network-name">Location</span></a>
+                                <a href="/searchbylocation." class="btn btn-default btn-lg"><span class="network-name">Location</span></a>
                             </li>
                         </ul>
                     </div>
