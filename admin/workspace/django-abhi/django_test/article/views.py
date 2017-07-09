@@ -62,9 +62,9 @@ def add_volunteers(request):
     if name != None:
         '''json = '{name:" ' name'', 'id': id, 'address': address, 'contact': contact,
                 'email': email, 'dob': dob, 'male': male, 'female': female}'''
-        json = '{name:"' + url + '" address: "' + address + '" name: "' + name + '"}'
+        json = '{id:"' + id + '"address:"' + address + '" name: "' + name + '"}'
         #json_data=json.dump(data)
-        result=firebase.post()
+        result=firebase.post(json)
     return render_to_response('add_volunteers.html')
 
 def scheduling(request):
