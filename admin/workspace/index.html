@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +12,10 @@
 
     <title>Landing Page - Team12</title>a
     <style type="text/css">
+    <script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
         body,
 html {
     width: 100%;
@@ -204,6 +210,39 @@ p.copyright {
     </nav>
     <!-- Header -->
     <a name="about"></a>
+    <script>
+    $(document).ready(function()
+    {
+        type="POST";
+        $("#login_button").click(function()
+        <!--{   echo "function";-->
+        {
+            var username=document.getElementById("username").value;
+            var password=document.getElementById("password").value;
+            console.log(username);
+            $.ajax(
+            {
+                url: '/success',
+                data:
+                {
+                    'username': username,
+                    'password': password
+                },
+                dataType: 'json',
+                success : function()
+                {
+
+                    window.location.href="/success"
+                },
+                error: function()
+                {
+
+                window.location.href="/success"
+                }
+            });
+        });
+    });
+    </script>
     <div class="intro-header">
         <div class="container">
 
@@ -214,16 +253,24 @@ p.copyright {
                         <hr class="intro-divider">
                         <div class="intro-social-buttons">
                         
+<<<<<<< HEAD
                                 <label style="color:black;"><b>Username</b></label>
                                 <input type="text" name="username" required style="color:black;"><br>
         
                                 <label style="color:black;"><b>Password</b></label>
                                 <input type="password" name="password" required style="color:black;"><br>
+=======
+                                <label><b>Username</b></label>
+                                <input type="text" placeholder="Enter Username" name="username" required style="color:black;" id="username"><br>
+        
+                                <label><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="password" required style="qcolor:black;" id="password"><br>
+>>>>>>> 0958531b36465899dd633f6b8a2f9d87b799789f
                             
                                 <input type="checkbox" checked="checked"><label style="color:black;">Remember me</label><br>
                            
-                                <a href="dashboard.html" class="btn btn-default btn-lg"><span class="network-name">Login</span></a>
-                           
+                                <input type=button id="login_button" class="btn btn-default btn-lg "><span class="network-name" >Login</span></>
+
                         </div>
                         
                     </div>
@@ -239,7 +286,7 @@ p.copyright {
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+
 
 </body>
 
