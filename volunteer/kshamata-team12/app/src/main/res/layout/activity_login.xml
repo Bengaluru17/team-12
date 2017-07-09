@@ -98,6 +98,7 @@
         <!-- login Button -->
         <TextView
             android:id="@+id/btn_login"
+            android:onClick="onClick"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -129,6 +130,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Kshamata"
+        android:fontFamily="sans-serif-condensed"
         android:textColor="#ffffff"
         android:textSize="45sp"
         android:layout_above="@id/footer"

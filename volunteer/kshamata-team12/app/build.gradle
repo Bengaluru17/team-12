@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion "25.0.0"
     defaultConfig {
         applicationId "org.kshamata.www.kshamata_team12"
         minSdkVersion 19
@@ -35,5 +35,7 @@ dependencies {
     compile 'com.google.firebase:firebase-core:10.2.1'
     compile 'com.google.firebase:firebase-database:10.2.1'
     compile 'com.google.firebase:firebase-storage:10.2.1'
+    compile 'com.google.firebase:firebase-storage:10.2.1'
+
 }
 apply plugin: 'com.google.gms.google-services'

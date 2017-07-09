@@ -9,8 +9,52 @@ public class SurveyDetails {
     String phone;
     String emailId;
     String training;
-    String skills;
-    String levelOfSkill;
+    String tailoringSkill;
+    String EmbroiderySkill;
+    String ArticraftsSkill;
+
+    public String getTailoringSkill() {
+        return tailoringSkill;
+    }
+
+    public void setTailoringSkill(String tailoringSkill) {
+        this.tailoringSkill = tailoringSkill;
+    }
+
+    public String getEmbroiderySkill() {
+        return EmbroiderySkill;
+    }
+
+    public void setEmbroiderySkill(String embroiderySkill) {
+        EmbroiderySkill = embroiderySkill;
+    }
+
+    public String getArticraftsSkill() {
+        return ArticraftsSkill;
+    }
+
+    public void setArticraftsSkill(String articraftsSkill) {
+        ArticraftsSkill = articraftsSkill;
+    }
+
+    public String getCookingSkills() {
+        return CookingSkills;
+    }
+
+    public void setCookingSkills(String cookingSkills) {
+        CookingSkills = cookingSkills;
+    }
+
+    public String getBakingSkills() {
+        return BakingSkills;
+    }
+
+    public void setBakingSkills(String bakingSkills) {
+        BakingSkills = bakingSkills;
+    }
+
+    String CookingSkills;
+    String BakingSkills;
     String currentSalary;
     String currentLatitude;
     String currentLongitude;
@@ -39,15 +83,6 @@ public class SurveyDetails {
 
     public void setCurrentLongitude(String currentLongitude) {
         this.currentLongitude = currentLongitude;
-    }
-
-
-    public String getSkills() {
-        return skills;
-    }
-
-    public void setSkills(String skills) {
-        this.skills = skills;
     }
 
     public String getDataOfSurvey() {
@@ -80,14 +115,6 @@ public class SurveyDetails {
 
     public void setTraining(String training) {
         this.training = training;
-    }
-
-    public String getLevelOfSkill() {
-        return levelOfSkill;
-    }
-
-    public void setLevelOfSkill(String levelOfSkill) {
-        this.levelOfSkill = levelOfSkill;
     }
 
     public String getCurrentSalary() {

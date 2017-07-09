@@ -11,6 +11,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.google.firebase.database.FirebaseDatabase;
+
 import org.kshamata.www.kshamata_team12.Fragments.FragmentDrawer;
 import org.kshamata.www.kshamata_team12.Fragments.FriendsFragment;
 import org.kshamata.www.kshamata_team12.Fragments.HomeFragment;
@@ -30,6 +32,8 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
         setContentView(R.layout.activity_main);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
 
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
