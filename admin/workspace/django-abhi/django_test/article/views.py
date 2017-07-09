@@ -60,10 +60,17 @@ def add_volunteers(request):
     male = request.GET.get('male', None)
     female = request.GET.get('female', None)
     if name != None:
-        data = {'name': name, 'id': id, 'address': address, 'contact': contact,
-            'email': email, 'dob': dob, 'male': male, 'female': female}
-        json_data = json.dumps(data)
-        result=firebase.post('/volunteers',json_data)
+        '''data = {'name': name, 'id': id, 'address': address, 'contact': contact,
+            'email': email, 'dob': dob, 'male': male, 'female': female}'''
+        for i in range(10):
+            '''json_data = json.dumps('id':id)
+            json_data.dumps('address':address)
+            json_data.dumps('contact':contact)
+            json_data.dumps('email':email)
+            json_data.dumps('dob':dob)
+            json_data.dumps('male':male) = json.dumps('female':female)
+            json_data = json.dumps('name':name)'''
+            result=firebase.post('/volunteers',json_data)
     return render_to_response('add_volunteers.html')
 def scheduling(request):
     return  render_to_response('scheduling.html')
