@@ -1,205 +1,224 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Search-Name</title>
-	 <meta charset="utf-8">
+<title>Home - Index</title>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Home - Index</title>
-
-        <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      
-       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-       <style type="text/css">
-        body,
-html {
+    <style>
+    .collapse
+    {
+    background-color:#f5f5f5;
+    }
+    body,html {
     width: 100%;
     height: 100%;
 }
-
-body,h1,h2,h3,h4,h5,h6{
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
 }
 
-.topnav {
-    font-size: 14px; 
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
 }
 
-.lead {
-    font-size: 18px;
-    font-weight: 400;
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
 }
 
-.intro-header {
-    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
-    text-align: center;
-    color: #f8f8f8;
-    background: url(../img/intro-bg.jpg) no-repeat center center;
-    background-size: cover;
+#myTable tr {
+  border-bottom: 1px solid #ddd;
 }
 
-.intro-message {
-    position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
 }
-
-.intro-message > h1 {
-    margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 5em;
-}
-
-.intro-divider {
-    width: 400px;
-    border-top: 1px solid #f8f8f8;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-}
-
-.intro-message > h3 {
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-}
-
-@media(max-width:767px) {
-    .intro-message {
-        padding-bottom: 15%;
-    }
-
-    .intro-message > h1 {
-        font-size: 3em;
-    }
-
-    ul.intro-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-
-    ul.intro-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
-
-    .intro-divider {
-        width: 100%;
-    }
-}
-
-.network-name {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 2px;
-}
-
-.content-section-a {
-    padding: 50px 0;
-    background-color: #ffffff;
-}
-
-.content-section-b {
-    padding: 50px 0;
-    border-top: 1px solid #e7e7e7;
-    border-bottom: 1px solid #e7e7e7;
-}
-
-.section-heading {
-    margin-bottom: 30px;
-}
-
-.section-heading-spacer {
-    float: left;
-    width: 200px;
-    border-top: 3px solid #e7e7e7;
-}
-
-.banner {
-    padding: 100px 0;
-    color: red;
-    background: url(../img/banner-bg.jpg) no-repeat center center;
-    background-size: cover;
-}
-
-.banner h2 {
-    margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 3em;
-}
-
-.banner ul {
-    margin-bottom: 0;
-}
-
-.banner-social-buttons {
-    float: right;
-    margin-top: 0;
-}
-
-@media(max-width:1199px) {
-    ul.banner-social-buttons {
-        float: left;
-        margin-top: 15px;
-    }
-}
-
-@media(max-width:767px) {
-    .banner h2 {
-        margin: 0;
-        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-        font-size: 3em;
-    }
-
-    ul.banner-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-
-    ul.banner-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
-}
-
-footer {
-    padding: 50px 0;
-    background-color: red;
-}
-
-p.copyright {
-    margin: 15px 0 0;
-}
-    </style>
-
-    
+</style>
 </head>
-<body>
-<div class="add_volunteer panel panel-primary">
-  <div class="panel-heading" align="center">Personal Details</div>
-  <div class="panel-body">
-<div class="row">
- <div class="form-group">
-        <label class="col-lg-4">Enter name</label>
-            <div class="col-lg-4">
-            <input type="text" class="form-control" id="search_name">
-            </div>
-        
-        
-         <a href="" class="btn btn-default btn-md" type="Submit" value="name_search"> 
-            <span class="network-name">Search</span></a>
-            
-            </div>
-            </div>
-        </div>
+<body><br><br>
+<div class="panel-group">
+    <div class="panel panel-primary">
+      <div class="panel-heading"><h4><b>Victims Skills Search</b></h4></div>
+      <div class="panel-body">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
+<table id="myTable">
+  <tr class="header">
+    <th>Name</th>
+    <th>Victim ID</th>
+    <th>Region</th>
+    <th>&nbsp;</th>
+  </tr>
+  </thead>
+            <tbody>
+              <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle">
+                <td>Neha</td>
+                <td>1141</td>
+                <td>Dadar, Mumbai</td>
+                <td><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i></td>
+              </tr>
+              <tr class="sales-history-data">
+                <td colspan="5" class="hiddenRow">  
+                    <div class="accordian-body collapse" id="demo1" align="center">
+                        <div class="media">
+                            <div class="media-left"  style="padding:0px 75px">
+                                <img src="../bootstrap/img/girl.png" class="media-object" style="width:150px">
+                            </div>
+                            <div class="media-body display:inline-block">
+                               <div class="list-group">
+                                    <div class="list-group-item" >
+                                      <h4 class="list-group-item-heading">Victim ID</h4> 
+                                      <p class="list-group-item-text">114A14-2AA</p>
+                                    </div>
+                                    <div class="list-group-item">
+                                      <h4 class="list-group-item-heading">Name</h4> 
+                                      <p class="list-group-item-text">Neha</p>
+                                    </div>
+                                    <div class="list-group-item">
+                                      <h4 class="list-group-item-heading">Education</h4> 
+                                      <p class="list-group-item-text">12th Pass</p>
+                                    </div>
+                                    <div class="list-group-item">
+                                      <h4 class="list-group-item-heading">DoB</h4>
+                                      <p class="list-group-item-text">12th March 1990</p>
+                                    </div>
+                                    <div class="list-group-item">
+                                      <h4 class="list-group-item-heading">Skills</h4>
+                                      <p class="list-group-item-text">Cooking</p>
+                                    </div>
+                                    <div class="list-group-item">
+                                      <h4 class="list-group-item-heading">Location</h4>
+                                      <p class="list-group-item-text">Dadar, Mumbai</p>
+                                    </div>
+                                    <div class="list-group-item">
+                                      <h4 class="list-group-item-heading">Installation Date</h4>
+                                      <p class="list-group-item-text">13/08/1990</p>
+                                    </div>
+                                    <div class="list-group-item">
+                                      <h4 class="list-group-item-heading">date of Joining</h4>
+                                      <p class="list-group-item-text">20th June 2017</p>
+                                    </div>
+                                     <div class="list-group-item">
+                                      <h4 class="list-group-item-heading">Current Location</h4>
+                                      <button type="button" class="btn btn-default btn-md">Click here</button>
+                                    </div>
+                                    <div class="list-group-item">
+                                      <h4 class="list-group-item-heading">Report</h4>
+                                      <button type="button" class="btn btn-default btn-md">Click here</button>
+                                    </div>
+        
+
+                            </div>
+                            </div>
+                                       </div>
+                        </div>
+                    </div>
+                </td>
+              </tr>
+                   
+              <tr data-toggle="collapse" data-target="#demo2" class="accordion-toggle">
+                <td>Gauri</td>
+                <td>1142</td>
+                <td>Bandra, Mumbai</td>
+                <td>Sewing</td>
+                <td><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i></td>
+              </tr>
+              <tr>
+                <td colspan="5" class="hiddenRow"><div class="accordian-body collapse" id="demo2" align="center">
+                   <div class="media">
+                            <div class="media-left"  style="padding:0px 75px">
+                                <img src="../bootstrap/img/girl.png" class="media-object" style="width:150px">
+                            </div>
+                            <div class="media-body display:inline-block">
+                               <div class="list-group">
+                                    <div class="list-group-item" >
+                                      <h4 class="list-group-item-heading">Victim ID</h4> 
+                                      <p class="list-group-item-text">114A14-2BB</p>
+                                    </div>
+                                    <div class="list-group-item">
+                                      <h4 class="list-group-item-heading">Name</h4> 
+                                      <p class="list-group-item-text">Gauri</p>
+                                    </div>
+                                    <div class="list-group-item">
+                                      <h4 class="list-group-item-heading">Education</h4> 
+                                      <p class="list-group-item-text">10th Pass</p>
+                                    </div>
+                                    <div class="list-group-item">
+                                      <h4 class="list-group-item-heading">DoB</h4>
+                                      <p class="list-group-item-text">15th April 1990</p>
+                                    </div>
+                                    <div class="list-group-item">
+                                      <h4 class="list-group-item-heading">Skills</h4>
+                                      <p class="list-group-item-text">Sewing</p>
+                                    </div>
+                                    <div class="list-group-item">
+                                      <h4 class="list-group-item-heading">Location</h4>
+                                      <p class="list-group-item-text">Jp Nagar,Bangalore</p>
+                                    </div>
+                                    <div class="list-group-item">
+                                      <h4 class="list-group-item-heading">Installation Date</h4>
+                                      <p class="list-group-item-text">13/08/2010</p>
+                                    </div>
+                                    <div class="list-group-item">
+                                      <h4 class="list-group-item-heading">date of Joining</h4>
+                                      <p class="list-group-item-text">30th July 2016</p>
+                                    </div>
+                                     <div class="list-group-item">
+                                      <h4 class="list-group-item-heading">Current Location</h4>
+                                      <button type="button" class="btn btn-default btn-md">Click here</button>
+                                    </div>
+                                    <div class="list-group-item">
+                                      <h4 class="list-group-item-heading">Report</h4>
+                                      <button type="button" class="btn btn-default btn-md">Click here</button>
+                                    </div>
+                </div></td>
+              </tr>
+              
+            </tbody>
+</table>
+</div>
+</div>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
 </body>
 </html>
